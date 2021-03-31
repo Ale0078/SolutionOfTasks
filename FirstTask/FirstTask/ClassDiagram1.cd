@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FirstTask.Startup&lt;T&gt;">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCACAAAAACAAAAAAAAEgKAAAIAAgACAABIgAAAAEAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_logger" />
+      <Property Name="ControllerToBoard" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FirstTask.Controllers.BoardController&lt;T&gt;">
+    <Position X="9" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAQAAIAAAAAAAAAAABAAAgAA=</HashCode>
+      <FileName>Controllers\BoardController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_logger" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FirstTask.ViewModels.ConsoleViewModel&lt;T&gt;">
+    <Position X="4.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ViewModels\ConsoleViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstTask.Views.ConsoleView&lt;T&gt;">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ConsoleView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task_Logic.UserInterface.Components.Abstracts.ViewModels&lt;T&gt;">
+    <Position X="2.5" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Task_Logic.UserInterface.Components.Abstracts.View&lt;T&gt;">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="ViewModelsToContainBoards" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task_Logic.UserInterface.Components.Abstracts.Controller&lt;T&gt;">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="BuilderToCreateBoard" />
+      <Property Name="ViewToDispayBoard" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="NLog.ILogger" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Task_Logic.Logic.Components.Interfaces.IBoardBuilder&lt;T&gt;">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
