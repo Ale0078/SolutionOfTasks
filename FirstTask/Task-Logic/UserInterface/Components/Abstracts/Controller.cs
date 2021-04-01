@@ -8,14 +8,14 @@ namespace Task_Logic.UserInterface.Components.Abstracts
         protected IBoardBuilder<T> BuilderToCreateBoard { get; set; }
         protected View<T> ViewToDispayBoard { get; set; }
 
-        public Controller(View<T> viewToDispayBoard, BoardBuilder<T> builderToCreateBoard) 
+        public Controller(View<T> viewToDispayBoard, IBoardBuilder<T> builderToCreateBoard) 
         {
             BuilderToCreateBoard = builderToCreateBoard;
             ViewToDispayBoard = viewToDispayBoard;
         }
 
         public abstract bool AddBoard();
-        public abstract void SetBoardToBuilder(BoardBuilder<T> boardBuilder);
+        public abstract void SetBoardToBuilder(IBoardBuilder<T> boardBuilder);
         public abstract IBoard<T> BuildBoard();
         public abstract void Display();
     }

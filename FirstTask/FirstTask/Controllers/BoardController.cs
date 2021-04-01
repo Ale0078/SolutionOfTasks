@@ -11,7 +11,7 @@ namespace FirstTask.Controllers
     {
         private ILogger _logger;
 
-        public BoardController(View<T> viewToDisplayBoard, BoardBuilder<T> builderToCreateBoard) 
+        public BoardController(View<T> viewToDisplayBoard, IBoardBuilder<T> builderToCreateBoard) 
             : base(viewToDisplayBoard, builderToCreateBoard)
         {
             _logger = LogManager.GetCurrentClassLogger();
@@ -38,7 +38,7 @@ namespace FirstTask.Controllers
             }
         }
 
-        public override void SetBoardToBuilder(BoardBuilder<T> boardBuilder)
+        public override void SetBoardToBuilder(IBoardBuilder<T> boardBuilder)
         {
             BuilderToCreateBoard = boardBuilder;
 
