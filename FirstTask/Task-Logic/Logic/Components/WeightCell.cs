@@ -6,16 +6,16 @@ namespace Task_Logic.Logic.Components
 {
     public class WeightCell<T> : ICell<T>
     {
-        public T CellColor { get; }
+        public T Color { get; }
 
         public WeightCell(T cellValue) 
         {
-            CellColor = cellValue;
+            Color = cellValue;
         }
 
         public override string ToString()
         {
-            return Convert.ToString(CellColor);
+            return Convert.ToString(Color);
         }
     }
 }

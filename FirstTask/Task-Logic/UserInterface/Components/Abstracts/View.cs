@@ -9,6 +9,6 @@
             ViewModelsToContainBoards = viewModelsToContainsBoards;
         }
 
-        public abstract bool Dispay();
+        public abstract bool Display();
     }
 }

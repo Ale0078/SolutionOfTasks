@@ -13,7 +13,7 @@ namespace Task_Logic.Logic.Components
         public int ColumnCount { get; init; }
         public int RowCount { get; init; }
 
-        public T this[int index] => cells[index].CellColor;
+        public T this[int index] => cells[index].Color;
 
         public ChessBoard(int columnCount, int rowCount, params T[] valuesToCells) 
         {
@@ -61,9 +61,11 @@ namespace Task_Logic.Logic.Components
         public override string ToString()
         {
             StringBuilder builder = new StringBuilder();
+
             for (int i = 0; i < cells.Length; i++)
             {
                 builder.Append(cells[i].ToString());
+
                 if ((i + 1) % ColumnCount == 0)
                 {
                     builder.Append('\n');

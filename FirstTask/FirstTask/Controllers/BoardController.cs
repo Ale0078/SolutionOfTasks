@@ -47,7 +47,7 @@ namespace FirstTask.Controllers
 
         public override void Display()
         {
-            if (!ViewToDispayBoard.Dispay()) 
+            if (!ViewToDispayBoard.Display()) 
             {
                 _logger.Error("Something was wrong during displaying board");
                 throw new InvalidOperationException();

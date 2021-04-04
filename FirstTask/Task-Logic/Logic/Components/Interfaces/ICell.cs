@@ -2,6 +2,6 @@
 {
     public interface ICell<T>
     {
-        T CellColor { get; }        
+        T Color { get; }        
     }
 }

@@ -16,6 +16,7 @@ namespace Task_Logic.Logic.Components.Builders
                 rowCount: RowCount,
                 valuesToCells: ValuesToSetsCells);
             board.BuildBoard();
+
             return board;
         }
     }

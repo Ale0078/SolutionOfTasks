@@ -12,7 +12,7 @@ namespace Task_Logic.UserInterface.Components.Abstracts
             BuilderToCreateBoard = builderToCreateBoard;
             ViewToDispayBoard = viewToDispayBoard;
         }
-
+        
         public abstract bool AddBoard();
         public abstract void SetBoardToBuilder(IBoardBuilder<T> boardBuilder);
         public abstract IBoard<T> BuildBoard();

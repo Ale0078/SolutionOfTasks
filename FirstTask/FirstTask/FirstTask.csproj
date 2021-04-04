@@ -8,12 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Task-Logic\Task-Logic.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="LibToTasks">
-      <HintPath>..\..\..\MyLibToTasks\LibToTasks\bin\Debug\net5.0\ref\LibToTasks.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\..\MylibToTasks\LibToTasks\LibToTasks.csproj" />
   </ItemGroup>
 
   <ItemGroup>

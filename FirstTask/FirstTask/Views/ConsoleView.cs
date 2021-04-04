@@ -11,7 +11,7 @@ namespace FirstTask.Views
         {
         }
 
-        public override bool Dispay()
+        public override bool Display()
         {
             try
             {

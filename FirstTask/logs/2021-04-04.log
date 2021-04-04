@@ -1,0 +1,16 @@
+2021-04-04 17:41:18.1999 | INFO | LibToTasks.Validation.Transformator | Value 4 can be converted to System.Int32
+2021-04-04 17:41:18.2253 | INFO | LibToTasks.Validation.Validator | Value 4 passed checking
+2021-04-04 17:41:18.2253 | INFO | LibToTasks.Validation.Transformator | Value 4 can be converted to System.Int32
+2021-04-04 17:41:18.2253 | INFO | LibToTasks.Validation.Validator | Value 4 passed checking
+2021-04-04 17:41:18.2253 | INFO | FirstTask.Controllers.BoardController`1 | Board was created
+2021-04-04 17:41:18.2253 | INFO | FirstTask.Controllers.BoardController`1 | Board was added to ViewMides
+2021-04-04 17:41:18.2343 | INFO | FirstTask.Controllers.BoardController`1 | Board was built correct
+2021-04-04 17:41:18.2343 | INFO | FirstTask.Startup`1 | Program was finished
+2021-04-04 17:55:55.0186 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Int32
+2021-04-04 17:55:55.0423 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-04 17:55:55.0423 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Int32
+2021-04-04 17:55:55.0423 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-04 17:55:55.0474 | INFO | FirstTask.Controllers.BoardController`1 | Board was created
+2021-04-04 17:55:55.0474 | INFO | FirstTask.Controllers.BoardController`1 | Board was added to ViewMides
+2021-04-04 17:55:55.0474 | INFO | FirstTask.Controllers.BoardController`1 | Board was built correct
+2021-04-04 17:55:55.0474 | INFO | FirstTask.Startup`1 | Program was finished
