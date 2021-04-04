@@ -1,9 +1,9 @@
 ﻿using System;
 using NLog;
 
+using FirstTask.Messages;
 using Task_Logic.Logic.Components.Interfaces;
 using Task_Logic.UserInterface.Components.Abstracts;
-using Task_Logic.Logic.Components.Builders.Abstracts;
 
 namespace FirstTask.Controllers
 {
@@ -21,7 +21,7 @@ namespace FirstTask.Controllers
         {
             ViewToDispayBoard.ViewModelsToContainBoards.AddBoard(BuildBoard());
 
-            _logger.Info("Board was added to ViewMides");
+            _logger.Info(LoggerMessage.ADD_BOARD);
 
             return true;
         }
@@ -34,7 +34,7 @@ namespace FirstTask.Controllers
             }
             finally 
             {
-                _logger.Info("Board was created");
+                _logger.Info(LoggerMessage.BUILD_BOARD);
             }
         }
 
@@ -42,18 +42,18 @@ namespace FirstTask.Controllers
         {
             BuilderToCreateBoard = boardBuilder;
 
-            _logger.Info("BoardBuilder was updated");
+            _logger.Info(LoggerMessage.SET_BOARD_TO_BUILDER);
         }
 
         public override void Display()
         {
             if (!ViewToDispayBoard.Display()) 
             {
-                _logger.Error("Something was wrong during displaying board");
+                _logger.Error(LoggerMessage.DISPLAY_ERROR);
                 throw new InvalidOperationException();
             }
 
-            _logger.Info("Board was built correct");
+            _logger.Info(LoggerMessage.DISPLAY);
         }
     }
 }

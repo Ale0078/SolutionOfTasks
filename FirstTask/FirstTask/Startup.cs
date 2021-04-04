@@ -1,6 +1,7 @@
 ﻿using System;
 using NLog;
 
+using FirstTask.Messages;
 using FirstTask.Controllers;
 using FirstTask.Views;
 using FirstTask.ViewModels;
@@ -29,6 +30,7 @@ namespace FirstTask
         public Startup(string[] args, params T[] valuesToSetCells)
         {
             _logger = LogManager.GetCurrentClassLogger();
+
             ValidatorToRowCountAndColumnCount = new Validator();
             TransformatorToColumnCountAndRowCount = new Transformator();
 
@@ -49,26 +51,24 @@ namespace FirstTask
 
                 if (!ControllerToBoard.AddBoard())
                 {
-                    _logger.Error("Board was not added to ViewModels");
+                    _logger.Error(LoggerMessage.ADD_BOARD_ERROR);
                 }
 
                 ControllerToBoard.Display();
             }
             catch (FormatException ex)
             {
-                _logger.Error("Program finalize with exception: {0}, messange: {1}", typeof(FormatException), ex.Message);
-                Console.WriteLine("Please, enter a count of column like int and a count of row like int too.\n" +
-                    "Both numbers must be no more than 99 and no less than 3.");
+                _logger.Error(LoggerMessage.STARTUP_EXCEPTION, typeof(FormatException), ex.Message);
+                Console.WriteLine(ExceptionMessage.EXCEPTION);
             }
             catch (IndexOutOfRangeException ex)
             {
-                _logger.Error("Program finalize with exception: {0}, messange: {1}", typeof(FormatException), ex.Message);
-                Console.WriteLine("Please, enter a count of column like int and a count of row like int too.\n" +
-                    "Both numbers must be no more than 99 and no less than 3.");
+                _logger.Error(LoggerMessage.STARTUP_EXCEPTION, typeof(FormatException), ex.Message);
+                Console.WriteLine(ExceptionMessage.EXCEPTION);
             }
             finally 
             {
-                _logger.Info("Program was finished");
+                _logger.Info(LoggerMessage.STARTUP_FINALY);
             }
         }
 
