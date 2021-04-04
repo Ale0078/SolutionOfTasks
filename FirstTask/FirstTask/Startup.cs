@@ -15,6 +15,7 @@ namespace FirstTask
     {
         private const int MAX_BOARD_SIZE = 100;
         private const int MIN_BOARD_SIZE = 2;
+        private const int ERROR = -1;
 
         private ILogger _logger;
 
@@ -88,8 +89,16 @@ namespace FirstTask
 
         private int GetColumnCountOrRowCount(string columnCountOrRowCount) 
         {
-            return CheckColumnCountOrRowCount(
-                columnCountOrRowCount: ConvertColumnCountOrRowCoutnt(columnCountOrRowCount));
+            int columnRowCount = ConvertColumnCountOrRowCoutnt(columnCountOrRowCount);
+
+            if (CheckColumnCountOrRowCount(columnRowCount))
+            {
+                return columnRowCount;
+            }
+            else 
+            {
+                return ERROR;
+            }
         }
 
         private int ConvertColumnCountOrRowCoutnt(string columnCountOrRowCount) 
@@ -97,7 +106,7 @@ namespace FirstTask
             return TransformatorToColumnCountAndRowCount.ConfirmConversion<int, string>(columnCountOrRowCount);
         }
 
-        private int CheckColumnCountOrRowCount(int columnCountOrRowCount) 
+        private bool CheckColumnCountOrRowCount(int columnCountOrRowCount) 
         {
             return ValidatorToRowCountAndColumnCount.CheckValue(validator =>
             {
