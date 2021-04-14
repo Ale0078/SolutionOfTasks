@@ -4,7 +4,7 @@ using Task_Logic.Logic.Components.Interfaces;
 
 namespace Task_Logic.Logic.Components 
 {
-    public class BlackCell<T> : ICell<T>
+    internal class BlackCell<T> : ICell<T>
     {
         public T Color { get; }
 

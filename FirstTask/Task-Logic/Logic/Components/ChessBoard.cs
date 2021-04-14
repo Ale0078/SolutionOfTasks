@@ -4,7 +4,7 @@ using Task_Logic.Logic.Components.Interfaces;
 
 namespace Task_Logic.Logic.Components
 {
-    public class ChessBoard<T> : IBoard<T>
+    internal class ChessBoard<T> : IBoard<T>
     {
         private readonly ICell<T>[] cells;
         private readonly T[] valuesToSetCells;

@@ -14,3 +14,11 @@
 2021-04-04 17:55:55.0474 | INFO | FirstTask.Controllers.BoardController`1 | Board was added to ViewMides
 2021-04-04 17:55:55.0474 | INFO | FirstTask.Controllers.BoardController`1 | Board was built correct
 2021-04-04 17:55:55.0474 | INFO | FirstTask.Startup`1 | Program was finished
+2021-04-04 21:01:58.4030 | INFO | LibToTasks.Validation.Transformator | Value 13 can be converted to System.Int32
+2021-04-04 21:01:58.4275 | INFO | LibToTasks.Validation.Validator | Value 13 passed checking
+2021-04-04 21:01:58.4275 | INFO | LibToTasks.Validation.Transformator | Value 13 can be converted to System.Int32
+2021-04-04 21:01:58.4275 | INFO | LibToTasks.Validation.Validator | Value 13 passed checking
+2021-04-04 21:01:58.4275 | INFO | FirstTask.Controllers.BoardController`1 | Board was created
+2021-04-04 21:01:58.4275 | INFO | FirstTask.Controllers.BoardController`1 | Board was added to ViewMides
+2021-04-04 21:01:58.4356 | INFO | FirstTask.Controllers.BoardController`1 | Board was built correct
+2021-04-04 21:01:58.4356 | INFO | FirstTask.Startup`1 | Program was finished
