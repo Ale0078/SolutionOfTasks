@@ -8,7 +8,8 @@ using FirstTask.ViewModels;
 using Task_Logic.Logic.Components.Builders;
 using Task_Logic.Logic.Components.Builders.Abstracts;
 using Task_Logic.UserInterface.Components.Abstracts;
-using LibToTasks.Validation;
+using LibToTasks.Validation.Interfaces;
+using LibToTasks.Builders;
 
 namespace FirstTask
 {
@@ -21,8 +22,8 @@ namespace FirstTask
         private ILogger _logger;
 
         private Controller<T> ControllerToBoard { get; set; }
-        private Validator ValidatorToRowCountAndColumnCount { get; set; }
-        private Transformator TransformatorToColumnCountAndRowCount { get; set; }
+        private IValidator ValidatorToRowCountAndColumnCount { get; set; }
+        private ITransformator TransformatorToColumnCountAndRowCount { get; set; }
 
         private string[] Args { get; set; }
         private T[] ValuesToSetCells { get; set; }
@@ -31,8 +32,8 @@ namespace FirstTask
         {
             _logger = LogManager.GetCurrentClassLogger();
 
-            ValidatorToRowCountAndColumnCount = new Validator();
-            TransformatorToColumnCountAndRowCount = new Transformator();
+            ValidatorToRowCountAndColumnCount = new DefaultValidatorBuilder().Create();
+            TransformatorToColumnCountAndRowCount = new DefaultTransformatorBuilder().Create();
 
             Args = args;
             ValuesToSetCells = valuesToSetCells;
